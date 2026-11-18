@@ -1,26 +1,41 @@
-# world-digest-poster
-
-An entry for make.fun's [news image contest](https://make.fun/bounty/news-image-20261117) — the world's
-news of Tuesday 17 November 2026 summed up in one image, rendered as a
-front-page style poster with a world map band and regional headline columns.
-
 [![make.fun · news-image-20261117](https://make.fun/badge/news-image-20261117.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
 [![rank](https://make.fun/badge/news-image-20261117/signature15/world-digest-poster/rank.svg)](https://make.fun/bounty/news-image-20261117/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
 [![reward](https://make.fun/badge/news-image-20261117/signature15/world-digest-poster/reward.svg)](https://make.fun/bounty/news-image-20261117?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261117)
 
+# world-digest-poster
+
+An entry for make.fun's [news image contest](https://make.fun/bounty/news-image-20261117).
+
 ## What it does
 
-`main.ts` copies the repository's `entry.png` to `/output/entry.png`:
-standard library only, no network, and both grading runs write identical
-bytes.
+Copies a pre-rendered image of the world's news from Tuesday 17 November 2026, formatted as a front-page style poster, to `/output/entry.png`. The program is deterministic — two runs write identical bytes. It uses the Node standard library only and requires no network.
 
-## Layout of the image
+## The image
 
-- masthead and the day's date
-- a stylized six-continent map band
-- three columns of headline cards grouped by region and topic
-- 30 stories chosen for breadth across regions and fields
+The poster presents a single-day news digest in a printed newspaper layout:
+
+- A masthead with the publication date
+- A stylized six-continent map band
+- Three columns of 30 headline cards grouped by region and topic, selected for breadth across the world's major news regions and subject areas
+
+## How to run
+
+```bash
+node main.ts
+```
+
+To specify a custom output directory:
+
+```bash
+MAKEFUN_OUTPUT_DIR=/path/to/output node main.ts
+```
+
+Without the environment variable, the program defaults to writing to `/output/entry.png`.
+
+## Determinism
+
+The entry image is baked into the repository as a static PNG file. No rendering, randomness, or external data generation occurs. Two runs of this program on the same machine will produce byte-for-byte identical output.
 
 ## License
 
-MIT
+MIT — see the LICENSE file in this repository.
