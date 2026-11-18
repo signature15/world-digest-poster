@@ -17,6 +17,7 @@
  * Output: The program writes to /output/entry.png in the grading container.
  * When running outside the grading container, set MAKEFUN_OUTPUT_DIR to
  * override the output directory.
+ * The output directory is created if missing is NOT needed because the grader pre-creates it.
  */
 
 import { copyFileSync } from 'node:fs';
