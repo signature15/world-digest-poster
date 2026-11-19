@@ -1,10 +1,10 @@
 /**
  * News image contest entry: world-digest-poster
  *
- * This program copies the pre-rendered entry.png (a front-page news poster for
- * Tuesday 17 November 2026) to the output directory. The poster features a
- * masthead, a stylized six-continent map band, and three columns of 30
- * regional headline cards selected for breadth across regions and topics.
+ * This program copies the pre-rendered entry.png (a broadsheet news poster for
+ * Wednesday 18 November 2026, v14) to the output directory. The poster features
+ * a masthead, time bands organizing content chronologically, stat cards with
+ * key metrics, and evening briefs summarizing regional developments.
  *
  * Determinism: Two runs of this program write identical bytes. The image is
  * static and baked into the repository; no rendering, randomness, or external
