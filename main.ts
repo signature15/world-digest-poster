@@ -1,3 +1,4 @@
+import { join } from 'node:path';
 /**
  * News image contest entry: world-digest-poster
  *
@@ -23,12 +24,14 @@
  */
 
 import { copyFileSync } from 'node:fs';
-import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const sourceUrl = new URL('./entry.png', import.meta.url);
 const sourcePath = sourceUrl.pathname;
 
 const outputDir = process.env.MAKEFUN_OUTPUT_DIR || '/output';
 const outputPath = join(outputDir, 'entry.png');
+import { mkdirSync } from 'node:fs';
+mkdirSync(outputDir, { recursive: true });
 
-copyFileSync(sourcePath, outputPath);
+copyFileSync(fileURLToPath(sourceUrl), outputPath);
