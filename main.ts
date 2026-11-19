@@ -2,9 +2,11 @@
  * News image contest entry: world-digest-poster
  *
  * This program copies the pre-rendered entry.png (a broadsheet news poster for
- * Wednesday 18 November 2026, v14) to the output directory. The poster features
- * a masthead, time bands organizing content chronologically, stat cards with
- * key metrics, and evening briefs summarizing regional developments.
+ * Wednesday 18 November 2026) to the output directory. The poster features
+ * a masthead, a regional strip (7 regions: Middle East, US, Asia, Europe, World,
+ * Ukraine, Africa), a numbers section with key statistics, and 30 stories
+ * organized chronologically in time bands (Overnight, Morning, Afternoon, Evening)
+ * with a sources footer.
  *
  * Determinism: Two runs of this program write identical bytes. The image is
  * static and baked into the repository; no rendering, randomness, or external
